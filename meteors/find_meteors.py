@@ -18,9 +18,9 @@ def get_dist(meteor):
     return meteor.get('distance', math.inf)
     
 if __name__ == '__main__':
-    proxy_info = {'http': 'http://d913328:Grameen12*@bcani.tcif.telstra.com.au:8080', 'https': 'https://d913328:Grameen12*@bcani.tcif.telstra.com.au:8080'}
+
     my_loc = (-37.81481, 144.951204)
-    meteor_resp = requests.get('https://data.nasa.gov/resource/y77d-th95.json', proxies=proxy_info)
+    meteor_resp = requests.get('https://data.nasa.gov/resource/y77d-th95.json')
     meteor_data = meteor_resp.json()
 
     for meteor in meteor_data:
